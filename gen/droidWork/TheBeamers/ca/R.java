@@ -11,24 +11,25 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int cat_picture1=0x7f020000;
-        public static final int cat_picture3=0x7f020001;
-        public static final int cat_pictures2=0x7f020002;
-        public static final int ic_tab_take_two=0x7f020003;
-        public static final int ic_tab_take_two_grey=0x7f020004;
-        public static final int ic_tab_take_two_white=0x7f020005;
-        public static final int ic_tab_ttt=0x7f020006;
-        public static final int ic_tab_ttt_grey=0x7f020007;
-        public static final int ic_tab_ttt_white=0x7f020008;
-        public static final int icon=0x7f020009;
-        public static final int sample_0=0x7f02000a;
-        public static final int sample_1=0x7f02000b;
-        public static final int sample_2=0x7f02000c;
-        public static final int sample_3=0x7f02000d;
-        public static final int sample_4=0x7f02000e;
-        public static final int sample_5=0x7f02000f;
-        public static final int sample_6=0x7f020010;
-        public static final int sample_7=0x7f020011;
+        public static final int black=0x7f020000;
+        public static final int cat_picture1=0x7f020001;
+        public static final int cat_picture3=0x7f020002;
+        public static final int cat_pictures2=0x7f020003;
+        public static final int ic_tab_take_two=0x7f020004;
+        public static final int ic_tab_take_two_grey=0x7f020005;
+        public static final int ic_tab_take_two_white=0x7f020006;
+        public static final int ic_tab_ttt=0x7f020007;
+        public static final int ic_tab_ttt_grey=0x7f020008;
+        public static final int ic_tab_ttt_white=0x7f020009;
+        public static final int icon=0x7f02000a;
+        public static final int sample_0=0x7f02000b;
+        public static final int sample_1=0x7f02000c;
+        public static final int sample_2=0x7f02000d;
+        public static final int sample_3=0x7f02000e;
+        public static final int sample_4=0x7f02000f;
+        public static final int sample_5=0x7f020010;
+        public static final int sample_6=0x7f020011;
+        public static final int sample_7=0x7f020012;
     }
     public static final class id {
         public static final int btnAppend=0x7f050004;

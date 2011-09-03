@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class TicTacToe extends Activity {
@@ -33,8 +32,7 @@ public class TicTacToe extends Activity {
                 	ImageView iv;
                 	
                 	iv = (ImageView)gridview.getChildAt(i);
-                	iv.setImageResource(R.drawable.sample_5);
-                	//iv.setImageResource(R.drawable.cat_pictures2);
+                	iv.setImageResource(mArt[0]);
                 }
         	}        	
         });
@@ -56,6 +54,8 @@ public class TicTacToe extends Activity {
                 TextView txtStatus = (TextView) findViewById(R.id.txtStatus);
             	
             	// Resolve the position into Row/Col and hand to the Controller
+//                row = (int)Math.floor(position / 3);
+//                col = position - 3*(row-1);
             	switch (position) {
             		case 0:
             		case 1:
@@ -79,27 +79,21 @@ public class TicTacToe extends Activity {
             			row=-1;
             			col=-1;
             	}
-
+          	
             	if (mController.takeTurn(row, col)) {
             		if (mController.getCurrentPlayer() == 1) {
-            			((ImageView) v).setImageResource(R.drawable.sample_0);
-            			//((ImageView) v).setImageResource(R.drawable.cat_picture1);
-            			//((ImageView) v).setImageResource(parent. mThumbIDs[1]);
+            			((ImageView) v).setImageResource(mArt[mController.getCurrentPlayer()]);
             		} else {
-              		  //((ImageView) v).setImageResource(R.drawable.sample_6);            			
-            			((ImageView) v).setImageResource(R.drawable.cat_picture1);
+            			((ImageView) v).setImageResource(mArt[mController.getCurrentPlayer()]);
             		}
 
             		if (mController.isGameOver()) {
             			txtStatus.setText("You win!");
-                        //Toast.makeText(TicTacToe.this, "You Win!", Toast.LENGTH_SHORT).show();
             		} else {
             			txtStatus.setText("Turn successful.");
-            			//Toast.makeText(TicTacToe.this, "Turn successful", Toast.LENGTH_SHORT).show();
             		}
             	} else {
             		txtStatus.setText("Invalid Position.  Try again");
-                    //Toast.makeText(TicTacToe.this, "Invalid Position.  Try again", Toast.LENGTH_SHORT).show();
             	}          	
             }
         }
@@ -107,19 +101,11 @@ public class TicTacToe extends Activity {
         
     }
     // references to our images
-    /*
-    private Integer[] mThumbIds = {
-            R.drawable.sample_2, R.drawable.sample_3,
-            R.drawable.sample_4, R.drawable.sample_5,
-            R.drawable.sample_6, R.drawable.sample_7,
-            R.drawable.sample_0, R.drawable.sample_1,
-            R.drawable.sample_2, R.drawable.sample_3,
-            R.drawable.sample_4, R.drawable.sample_5,
-            R.drawable.sample_6, R.drawable.sample_7,
-            R.drawable.sample_0, R.drawable.sample_1,
-            R.drawable.sample_2, R.drawable.sample_3,
-            R.drawable.sample_4, R.drawable.sample_5,
-            R.drawable.sample_6, R.drawable.sample_7
-    };*/
+    private Integer[] mArt = {
+            R.drawable.black, 
+            R.drawable.sample_0, R.drawable.cat_picture1, 		// Cats and dogs! 
+            R.drawable.sample_0, R.drawable.sample_6, 	  		// Dogs
+            R.drawable.cat_pictures2, R.drawable.cat_picture1 	// Cats 
+    };
     
 }

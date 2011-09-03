@@ -11,10 +11,11 @@
     		android:layout_height="270dp"
     		android:columnWidth="90dp"
     		android:numColumns="3"
-    		android:verticalSpacing="10dp"
-    		android:horizontalSpacing="10dp"
     		android:stretchMode="columnWidth"
     		android:gravity="center"
+    		android:background="@drawable/black"
+    		android:horizontalSpacing="-1px"
+    		android:verticalSpacing="-1px"
 		/>
 		<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/btnReset" android:text="Reset"></Button>
 		<TextView
